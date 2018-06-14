@@ -46,5 +46,5 @@ def binary_max_ent(X, tau=.1):
 ###########################Gumbel########################################
 def gumbel_soft(pi, g, tau=.1):
     logit = tf.log(pi + EPS)
-    y = tf.nn.softmax((g+logit)/tau, axis = 2)
+    y = tf.nn.softmax((g+logit)/tau, axis = -1)
     return(y)
